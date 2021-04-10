@@ -1,0 +1,1 @@
+enum CellType {id, text, image, textButton}
