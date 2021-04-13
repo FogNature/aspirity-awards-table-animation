@@ -105,6 +105,7 @@ class _TablePageState extends State<TablePage> {
             TableView(
               data: data,
             ),
+            SizedBox(height: 80,),
           ],
         ),
       ),

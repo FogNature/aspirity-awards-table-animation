@@ -69,7 +69,7 @@ class _AspirityTableRowState extends State<AspirityTableRow>
     /// Animate row padding from start to 200 ms or from 300 ms to end
     _paddingAnimation = Tween<double>(begin: 0, end: 8).animate(CurvedAnimation(
       parent: _controller,
-      curve: Interval(0, 0.4, curve: Curves.ease),
+      curve: Interval(0, 0.4, curve: Curves.easeInOut),
     ));
     /// Animate row color (just for WOW effect) from start to 200 ms or from 300 ms to end
     _colorAnimation = ColorTween(
@@ -84,13 +84,13 @@ class _AspirityTableRowState extends State<AspirityTableRow>
         ColorTween(begin: Colors.transparent, end: Colors.black12)
             .animate(CurvedAnimation(
       parent: _controller,
-      curve: Interval(0.0, 0.6, curve: Curves.ease),
+      curve: Interval(0.0, 0.6, curve: Curves.easeOut),
     ));
     /// Animate row shadow radius from 100 ms to 300 ms or from 200 ms to 400 ms
     _blurRadiusAnimation =
         Tween<double>(begin: 0, end: 12).animate(CurvedAnimation(
       parent: _controller,
-      curve: Interval(0.2, 0.6, curve: Curves.ease),
+      curve: Interval(0.2, 0.6, curve: Curves.easeInOut),
     ));
     /// Animate row height from 200 ms to 400 ms or from 100 ms to 300 ms
     _heightAnimation = Tween<double>(
@@ -98,7 +98,7 @@ class _AspirityTableRowState extends State<AspirityTableRow>
       end: 136,
     ).animate(CurvedAnimation(
       parent: _controller,
-      curve: Interval(0.4, 0.8, curve: Curves.ease),
+      curve: Interval(0.4, 0.8, curve: Curves.easeOutCubic),
     ))
       ..addStatusListener((status) {
         if (status == AnimationStatus.forward ||
@@ -111,7 +111,7 @@ class _AspirityTableRowState extends State<AspirityTableRow>
     /// Show or hide content from 300 ms to the end or from the start to 200 ms
     _opacityAnimation = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(
       parent: _controller,
-      curve: Interval(0.6, 1, curve: Curves.ease),
+      curve: Interval(0.6, 1, curve: Curves.easeInOut),
     ));
   }
 
